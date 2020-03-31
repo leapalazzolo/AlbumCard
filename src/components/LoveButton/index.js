@@ -18,8 +18,8 @@ export default function LoveButton(props) {
   return (
     <StyledRating
       name="customized-color"
-      defaultValue={false}
-      value={props.liked}
+      defaultValue={0}
+      value={props.liked ? 1 : 0}
       max={1}
       icon={<FavoriteIcon fontSize="inherit" />}
       emptyIcon={<FavoriteIconBorder />}
@@ -29,8 +29,4 @@ export default function LoveButton(props) {
 
 LoveButton.propTypes = {
   liked: PropTypes.bool
-};
-
-LoveButton.defaultProps = {
-  liked: false
 };

@@ -20,7 +20,7 @@ function App() {
   const classes = useStyles();
   const legend = "Rate this album";
   const listAlbums = albums.map(album => (
-    <Grid item xs={4}>
+    <Grid item xs={4} key={album.name + album.artist}>
       <Paper className={classes.paper}>
         <Card
           name={album.name}
